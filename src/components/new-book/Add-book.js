@@ -11,8 +11,7 @@ export default function AddBook() {
         type="text"
         className="input-text"
         placeholder="Author"
-        name="title"
-        Author
+        name="author"
       />
     </form>
   );
