@@ -1,12 +1,19 @@
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import ListOfBooks from './components/pages/list-of-books/List-of-books';
+import Categories from './components/pages/categories/Categories';
+import Header from './components/header/Header';
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit and save to reload.
-        </p>
-        Learn React
-      </header>
+    <div className="main-container">
+      <React.StrictMode>
+        <Header />
+        <Routes>
+          <Route path="/" element={<ListOfBooks />} />
+          <Route path="categories" element={<Categories />} />
+        </Routes>
+      </React.StrictMode>
     </div>
   );
 }
