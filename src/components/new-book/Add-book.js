@@ -1,4 +1,4 @@
-export default function AddBook() {
+export default function NewBook() {
   return (
     <form>
       <input
