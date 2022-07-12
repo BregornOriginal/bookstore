@@ -2,7 +2,14 @@ import { createReducer } from '@reduxjs/toolkit';
 import { addBook, deleteBook } from './books/books';
 
 const initialState = {
-  books: [],
+  books: [{
+    title: 'The lord of the rings',
+    author: 'J. R. R. Tolkien',
+  },
+  {
+    title: 'World of Warcraft',
+    author: 'Matt Burns',
+  }],
 };
 
 const bookReducer = createReducer(initialState, (builder) => {
