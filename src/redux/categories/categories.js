@@ -1,5 +1,5 @@
 import { createAction } from '@reduxjs/toolkit';
 
-const categoriesOfBooks = createAction('UNDER_CONSTRUCTION');
+const categoriesOfBooks = createAction('bookstore/categories/CHECK_STATUS');
 
 export default categoriesOfBooks;
