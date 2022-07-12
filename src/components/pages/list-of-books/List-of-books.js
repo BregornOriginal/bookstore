@@ -1,5 +1,5 @@
 import Book from '../../book/Book';
-import AddBook from '../../new-book/Add-book';
+import NewBook from '../../new-book/Add-book';
 
 export default function ListOfBooks() {
   return (
@@ -7,7 +7,7 @@ export default function ListOfBooks() {
       <ul />
       <Book />
       <button type="button">Delete</button>
-      <AddBook />
+      <NewBook />
     </div>
   );
 }
