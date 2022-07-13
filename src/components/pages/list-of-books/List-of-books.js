@@ -1,10 +1,12 @@
 import { useSelector } from 'react-redux';
-import Book from '../../book/Book';
+import { useDispatch } from 'react-redux/es/exports';
 import NewBook from '../../new-book/Add-book';
+import { deleteBook } from '../../../redux/books/books';
 
 export default function ListOfBooks() {
+  const dispatch = useDispatch();
   const deleteBookHandler = (id) => {
-
+    dispatch(deleteBook({ id }));
   };
 
   const books = useSelector((state) => state.books.books);
@@ -17,15 +19,14 @@ export default function ListOfBooks() {
       <td>{book.author}</td>
       <td>
         <button type="button" className="delete" onClick={() => deleteBookHandler(book.id)}>
-          x
+          Delete
         </button>
+        {console.log(book.id)}
       </td>
     </tr>
   ));
   return (
-    <div>
-      <ul />
-      <Book />
+    <div className="list-of-books">
       <table>
         <tbody>
           {booksTable}
