@@ -5,8 +5,6 @@ export default function Categories() {
   const dispatch = useDispatch();
   const categories = useSelector((state) => state.categories.categories);
 
-  console.log(categories);
-
   const checkStatusHandler = () => {
     dispatch(categoriesOfBooks('Under construction'));
   };
