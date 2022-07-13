@@ -5,12 +5,12 @@ import { deleteBook } from '../../../redux/books/books';
 
 export default function ListOfBooks() {
   const dispatch = useDispatch();
+  const books = useSelector((state) => state.books.books);
+
   const deleteBookHandler = (id) => {
     dispatch(deleteBook({ id }));
   };
 
-  const books = useSelector((state) => state.books.books);
-  console.log(books);
   const booksTable = books.map((book) => (
     <tr
       key={book.title}
@@ -21,7 +21,6 @@ export default function ListOfBooks() {
         <button type="button" className="delete" onClick={() => deleteBookHandler(book.id)}>
           Delete
         </button>
-        {console.log(book.id)}
       </td>
     </tr>
   ));

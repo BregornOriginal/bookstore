@@ -1,17 +1,22 @@
-// import categoriesReducer from '../../../redux/categoriesReducer';
+import { useDispatch, useSelector } from 'react-redux/es/exports';
+import categoriesOfBooks from '../../../redux/categories/categories';
 
-export default function Quote() {
-  // const dispatch = useDispatch();
+export default function Categories() {
+  const dispatch = useDispatch();
+  const categories = useSelector((state) => state.categories.categories);
 
-  // const checkStatusHandler = () => {
-  //   dispatch(categoriesReducer({ id }));
-  // };
+  console.log(categories);
+
+  const checkStatusHandler = () => {
+    dispatch(categoriesOfBooks('Under construction'));
+  };
 
   return (
     <main>
+      <div className="status">{categories}</div>
       <button
         type="button"
-        // onClick={() => categoriesReducer}
+        onClick={() => checkStatusHandler(categories)}
       >
         Check Status
       </button>
