@@ -12,8 +12,8 @@ const bookReducer = createReducer(initialState, (builder) => {
     })
     .addCase(deleteBook, (state, action) => ({
       ...state, books: state.books.filter((book) => book.id !== action.payload.id),
-    }));
-  return initialState.books;
+    }))
+    .addDefaultCase((state) => state);
 });
 
 export default bookReducer;

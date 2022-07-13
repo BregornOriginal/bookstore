@@ -2,15 +2,15 @@ import { createReducer } from '@reduxjs/toolkit';
 import categoriesOfBooks from './categories/categories';
 
 const initialState = {
-  categories: [],
+  categories: '',
 };
 
 const categoriesReducer = createReducer(initialState, (builder) => {
   builder
-    .addCase(categoriesOfBooks, (state, action) => {
-      action.payload('UNDER CONSTRUCTION');
-    });
-  return initialState.categories;
+    .addCase(categoriesOfBooks, (state, action) => ({
+      ...state, categories: action.payload,
+    }))
+    .addDefaultCase((state) => state);
 });
 
 export default categoriesReducer;
