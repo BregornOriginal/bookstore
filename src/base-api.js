@@ -27,7 +27,6 @@ export const getBooks = createAsyncThunk(
       },
     });
     const data = await response.json();
-    console.log(createBookList(data));
     return createBookList(data);
   },
 );
@@ -41,9 +40,9 @@ export const addBooksAsync = createAsyncThunk(
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
       },
+    }).then(() => {
+      thunkAPI.dispatch(getBooks());
     });
-
-    thunkAPI.dispatch(getBooks());
   },
 );
 
