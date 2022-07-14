@@ -1,5 +1,22 @@
-import { createAction } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
-const categoriesOfBooks = createAction('bookstore/categories/CHECK_STATUS');
+const initialState = {
+  categories: '',
+};
 
-export default categoriesOfBooks;
+const categoriesReducer = createSlice({
+  name: 'categories',
+  initialState,
+  reducers: {
+    checking: (state, action) => ({
+      ...state,
+      categories: action.payload,
+    }),
+  },
+  extraReducers: (builder) => {
+    builder.addDefaultCase((state) => state);
+  },
+});
+
+export const { checking } = categoriesReducer.actions;
+export default categoriesReducer;
