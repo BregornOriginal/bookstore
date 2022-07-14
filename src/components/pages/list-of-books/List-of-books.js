@@ -1,29 +1,36 @@
-import { useSelector } from 'react-redux';
-import { useDispatch } from 'react-redux/es/exports';
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 import NewBook from '../../new-book/Add-book';
-import { deleteBook } from '../../../redux/books/books';
+import { getBooks, deleteBooksAsync } from '../../../base-api';
+// import { deleteBook } from '../../../redux/books/books';
 
 export default function ListOfBooks() {
   const dispatch = useDispatch();
-  const books = useSelector((state) => state.books.books);
+  const { books } = useSelector((state) => state.books);
+
+  useEffect(() => {
+    dispatch(getBooks());
+  }, []);
 
   const deleteBookHandler = (id) => {
-    dispatch(deleteBook({ id }));
+    console.log(id);
+    dispatch(deleteBooksAsync(id));
   };
-
-  const booksTable = books.map((book) => (
+  const booksTable = books.length ? books.map((book) => (
     <tr
-      key={book.title}
+      key={book.id}
     >
       <td>{book.title}</td>
       <td>{book.author}</td>
+      <td>{book.category}</td>
       <td>
         <button type="button" className="delete" onClick={() => deleteBookHandler(book.id)}>
           Delete
         </button>
       </td>
     </tr>
-  ));
+  )) : <tr className="fieldEmpty"><td>Books not found</td></tr>;
+
   return (
     <div className="list-of-books">
       <table>

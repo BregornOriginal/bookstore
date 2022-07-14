@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux/es/exports';
 import { nanoid } from 'nanoid';
-import { addBook } from '../../redux/books/books';
+import { addBooksAsync } from '../../base-api';
 
 export default function NewBook() {
   const [title, setTitle] = useState('');
@@ -11,17 +11,21 @@ export default function NewBook() {
 
   const addBookHandler = (e) => {
     e.preventDefault();
-    dispatch(addBook({
+    dispatch(addBooksAsync({
       title,
       author,
-      id: nanoid(),
+      item_id: nanoid(),
+      category: 'fiction',
     }));
+    setTitle('');
+    setAuthor('');
   };
 
   return (
     <form className="add-book">
       <div>
         <input
+          value={title}
           name="title"
           type="text"
           className="input-text"
@@ -31,6 +35,7 @@ export default function NewBook() {
       </div>
       <div>
         <input
+          value={author}
           name="author"
           type="text"
           className="input-text"
