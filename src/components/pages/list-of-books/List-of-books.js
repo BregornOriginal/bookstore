@@ -2,7 +2,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import NewBook from '../../new-book/Add-book';
 import { getBooks, deleteBooksAsync } from '../../../base-api';
-// import { deleteBook } from '../../../redux/books/books';
 
 export default function ListOfBooks() {
   const dispatch = useDispatch();
