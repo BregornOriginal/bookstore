@@ -16,20 +16,29 @@ const Book = (props) => {
   };
 
   return (
-    <div className="book-container">
-      <div className="book-description">
-        <h2>{title}</h2>
-        <h3>{author}</h3>
-        <h4>{category}</h4>
-      </div>
-      <ul>
-        <li>
-          <p>Comments</p>
-        </li>
-      </ul>
-      <button type="button" className="delete" onClick={() => deleteBookHandler()}>
-        Delete
-      </button>
+    <article className="card">
+      <section className="book-section">
+        <div className="book-description">
+          <h4>{category}</h4>
+          <h2>{title}</h2>
+          <h3>{author}</h3>
+        </div>
+        <ul className="book-options">
+          <li>
+            <a href="/">Comments</a>
+          </li>
+          <span className="separator" />
+          <li>
+            <button type="button" className="remove-button" onClick={() => deleteBookHandler()}>
+              Remove
+            </button>
+          </li>
+          <span className="separator" />
+          <li>
+            <a href="/">Edit</a>
+          </li>
+        </ul>
+      </section>
       <div className="sec-graph">
         <CircularProgressbar
           value={percentage}
@@ -40,23 +49,26 @@ const Book = (props) => {
             trailColor: 'rgba(0,0,0,0.1)',
           })}
         />
-        <div>
+        <div className="chapter-status">
           <h4>{`${percentage}%`}</h4>
           <p>Completed</p>
         </div>
       </div>
+      <span className="status-separator" />
       <div className="sec-update">
-        <h4>CURRENT CHAPTER</h4>
+        <h5>CURRENT CHAPTER</h5>
         <p>{chapter}</p>
-        <button type="button" label="UPDATE PROGRESS" axn={() => console.log(`${title} btn pressed`)} />
+        <button type="button" label="UPDATE PROGRESS" className="update-progress">
+          UPDATE PROGRESS
+        </button>
       </div>
-    </div>
+    </article>
   );
 };
 
 Book.defaultProps = {
   chapter: 'Not Specificated',
-  percentage: 0,
+  percentage: 87,
 };
 
 Book.propTypes = {
