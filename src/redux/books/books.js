@@ -1,29 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { getBooks } from '../../base-api';
+import { createAction } from '@reduxjs/toolkit';
 
-const initialState = {
-  books: [],
-  status: null,
-};
-
-const bookReducer = createSlice({
-  name: 'books',
-  initialState,
-  extraReducers: {
-    [getBooks.pending]: (state) => ({
-      ...state,
-      status: 'loading',
-    }),
-    [getBooks.fulfilled]: (state, action) => ({
-      ...state,
-      status: 'success',
-      books: action.payload,
-    }),
-    [getBooks.rejected]: (state) => ({
-      ...state,
-      status: 'failed',
-    }),
-  },
-});
-
-export default bookReducer;
+export const addBook = createAction('bookstore/books/ADD_BOOK');
+export const deleteBook = createAction('bookstore/books/DELETE_BOOK');
