@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import CreateBook from '../../add-book/Add-book';
 import { getBooks } from '../../../base-api';
 import Book from '../../book/book';
+import './list-of-books.css';
 
 export default function ListOfBooks() {
   const dispatch = useDispatch();
@@ -13,20 +14,25 @@ export default function ListOfBooks() {
   }, []);
 
   return (
-    <div className="list-of-books">
-      {
-        books.length ? books.map((book) => (
-          <Book
-            author={book.author}
-            category={book.category}
-            id={book.id}
-            key={book.id}
-            title={book.title}
-            percentage={book.percentage}
-          />
-        )) : <p>Books not found</p>
-      }
+    <>
+      <section className="list-of-books">
+        {
+          books.length ? books.map((book) => (
+            <Book
+              author={book.author}
+              category={book.category}
+              id={book.id}
+              key={book.id}
+              title={book.title}
+              percentage={book.percentage}
+            />
+          )) : <p>Books not found</p>
+        }
+      </section>
+      <hr className="book-divisor" />
+      <h6>ADD NEW BOOK</h6>
       <CreateBook />
-    </div>
+    </>
+
   );
 }

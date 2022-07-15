@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux/es/exports';
 import { nanoid } from 'nanoid';
 import { addBooksAsync } from '../../base-api';
+import './add-book.css';
 
 export default function CreateBook() {
   const [title, setTitle] = useState('');
@@ -23,7 +24,7 @@ export default function CreateBook() {
 
   return (
     <form className="add-book">
-      <div>
+      <div className="input-container">
         <input
           value={title}
           name="title"
@@ -33,7 +34,7 @@ export default function CreateBook() {
           onChange={(e) => setTitle(e.target.value)}
         />
       </div>
-      <div>
+      <div className="input-container">
         <input
           value={author}
           name="author"
@@ -43,7 +44,7 @@ export default function CreateBook() {
           onChange={(e) => setAuthor(e.target.value)}
         />
       </div>
-      <button type="button" onClick={addBookHandler}>Add Book</button>
+      <button className="add-button" type="button" onClick={addBookHandler}>ADD BOOK</button>
     </form>
   );
 }
