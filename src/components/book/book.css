@@ -1,145 +1,144 @@
 * {
-	margin: 0;
-	box-sizing: border-box;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 h2 {
-	font-family: 'Roboto Slab';
-	font-size: 1.375rem;
-	letter-spacing: -0.2px;
-	font-weight: bold;
-	color: rgb(18, 18, 18);
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 1.375rem;
+  letter-spacing: -0.2px;
+  font-weight: bold;
+  color: rgb(18, 18, 18);
 }
 
 h4 {
-	font-family: Montserrat;
-	font-size: 0.875rem;
-	font-weight: bold;
-	color: rgb(18, 18, 18);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: rgb(18, 18, 18);
 }
 
 h3 {
-	font-family: 'Roboto Slab';
-	font-size: 0.875rem;
-	font-weight: 300;
-	margin-bottom: 1.31em;
-	color: #4386bf;
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  margin-bottom: 1.31em;
+  color: #4386bf;
 }
 
 .sec-graph {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .graphBox {
-	height: 90px;
-	width: 90px;
+  height: 90px;
+  width: 90px;
 }
 
 .card {
-	background-color: white;
-	box-shadow: 0 0 2px 0px #666;
-	border-radius: 3px;
-	display: flex;
-	margin: 2em 6.25em 1.75em 6.25em;
-	justify-content: space-between;
+  background-color: white;
+  box-shadow: 0 0 2px 0 #666;
+  border-radius: 3px;
+  display: flex;
+  margin: 2em 6.25em 1.75em 6.25em;
+  justify-content: space-between;
 }
 
 .book-section {
-	display: flex;
-	flex-direction: column;
-	margin: 2.68em 0 1.75em 1.68em;
+  display: flex;
+  flex-direction: column;
+  margin: 2.68em 0 1.75em 1.68em;
 }
 
 .book-options {
-	display: flex;
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	text-decoration: none;
-	align-items: flex-end;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  align-items: flex-end;
 }
 
 .separator {
-	margin: 0 7px;
-	width: 0.125rem;
-	height: 1.5rem;
-	margin: 0.75rem 1.063rem 0 0.938rem;
-	border: solid 1px #e8e8e8;
+  width: 0.125rem;
+  height: 1.5rem;
+  margin: 0.75rem 1.063rem 0 0.938rem;
+  border: solid 1px #e8e8e8;
 }
 
 .book-options li a {
-	list-style: none;
-	text-decoration: none;
-	font-family: 'Roboto Slab';
-	font-size: 0.875rem;
-	font-weight: 300;
-	color: #4386bf;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #4386bf;
 }
 
 .remove-button {
-	font-family: 'Roboto Slab';
-	font-size: 0.875rem;
-	font-weight: 300;
-	color: #4386bf;
-	background-color: white;
-	border: none;
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #4386bf;
+  background-color: white;
+  border: none;
 }
 
 .remove-button:hover {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .chapter-status p {
-	opacity: 0.5;
-	font-family: 'Montserrat';
-	margin-left: 10px;
+  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  margin-left: 10px;
 }
 
 .chapter-status h4 {
-	margin-left: 10px;
-	font-size: 2rem;
-	font-family: 'Montserrat';
+  margin-left: 10px;
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .sec-update {
-	margin: 2em 7em 2.18em 0;
+  margin: 2em 7em 2.18em 0;
 }
 
 .status-separator {
-	width: 0.125rem;
-	height: 4.37rem;
-	margin: 3.75rem 1.063rem 0 0.938rem;
-	border: solid 1px #e8e8e8;
+  width: 0.125rem;
+  height: 4.37rem;
+  margin: 3.75rem 1.063rem 0 0.938rem;
+  border: solid 1px #e8e8e8;
 }
 
 .sec-update h5 {
-	opacity: 0.5;
-	font-family: 'RobotoSlab';
-	font-size: 0.813rem;
-	font-weight: 300;
-	color: rgb(18, 18, 18);
-	margin-bottom: 0.4rem;
+  opacity: 0.5;
+  font-family: 'RobotoSlab', sans-serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  color: rgb(18, 18, 18);
+  margin-bottom: 0.4rem;
 }
 
 .sec-update p {
-	font-family: 'RobotoSlab';
-	font-size: 1rem;
-	font-weight: 300;
-	letter-spacing: -0.4px;
-	color: #121212;
-	margin-bottom: 1.8rem;
+  font-family: 'RobotoSlab', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: -0.4px;
+  color: #121212;
+  margin-bottom: 1.8rem;
 }
 
 .update-progress {
-	width: 11.5rem;
-	height: 2.063rem;
-	border-radius: 3px;
-	border: none;
-	background-color: #0290ff;
-	font-family: 'Roboto Slab';
-	font-size: 0.813rem;
-	letter-spacing: 0.5px;
-	font-weight: 300;
-	color: rgb(255, 255, 255);
+  width: 11.5rem;
+  height: 2.063rem;
+  border-radius: 3px;
+  border: none;
+  background-color: #0290ff;
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 0.813rem;
+  letter-spacing: 0.5px;
+  font-weight: 300;
+  color: rgb(255, 255, 255);
 }

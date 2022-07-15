@@ -77,7 +77,7 @@ Book.propTypes = {
   category: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   percentage: PropTypes.number,
-  chapter: PropTypes.number,
+  chapter: PropTypes.string,
 };
 
 export default Book;
