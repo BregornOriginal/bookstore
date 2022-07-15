@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import ListOfBooks from './components/pages/list-of-books/List-of-books';
 import Categories from './components/pages/categories/Categories';
 import Header from './components/header/Header';
+import './index.css';
 
 function App() {
   return (

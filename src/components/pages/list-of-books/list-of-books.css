@@ -1,0 +1,16 @@
+.book-divisor {
+  width: 77%;
+  margin: auto;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  color: #e8e8e8;
+}
+
+h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0 0 1.18rem 6.25rem;
+  letter-spacing: -0.18px;
+  color: grey;
+}
