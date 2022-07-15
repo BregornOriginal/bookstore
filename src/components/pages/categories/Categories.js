@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux/es/exports';
 import { checking } from '../../../redux/categories/categories';
+import './categories.css';
 
 export default function Categories() {
   const dispatch = useDispatch();
@@ -13,6 +14,7 @@ export default function Categories() {
     <main>
       <div className="status">{categories}</div>
       <button
+        className="check-button"
         type="button"
         onClick={() => checkStatusHandler(categories)}
       >
